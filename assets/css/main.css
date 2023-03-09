@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+@media (min-width: 500px) {
+  section {
+    margin-top: 120px;
+  }
+  .navbar {
+    background-color: #101010;
+    height: 80px;
+    position: fixed;
+    z-index: 2;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  .navbar ul li {
+    padding: 0 0.5em;
+  }
+  .navbar .navbar-cta {
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  .navbar .navbar-cta button {
+    color: #BE0638;
+    padding: 0.4em 2em;
+  }
+  .hero {
+    height: 100vh;
+  }
+  .hero .hero-title {
+    font-family: "Roboto Condensed";
+    font-size: 5.5rem;
+    font-weight: 600;
+  }
+  .hero .hero-body {
+    font-size: 2rem;
+  }
+  .hero .hero-cta {
+    background-color: #BE0638;
+    border-radius: 4px;
+  }
+  .why-fit {
+    height: 100vh;
+    margin: 0 6em;
+  }
+  .why-fit .why-fit-bg {
+    height: 320px;
+    margin: auto;
+    background: url("/assets/images/why-fit-bg.jpg");
+    border-radius: 1.4em;
+  }
+  .why-fit .why-fit-bg .bg-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .why-fit .why-fit-bg .bg-overlay .bg-text {
+    font-family: "Roboto Condensed";
+    font-size: 4.2rem;
+    font-weight: 600;
+  }
+  .why-fit .why-fit-body {
+    margin: 7em 0;
+  }
+  .why-fit .why-fit-body .card {
+    height: 360px;
+    border-radius: 1em;
+    padding: 2em;
+    font-family: "Nunito Sans";
+    background-color: #181818;
+    transition: all 0.5s ease;
+  }
+  .why-fit .why-fit-body .card .heading {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .why-fit .why-fit-body .card .body {
+    font-size: 1.05em;
+    font-weight: 100;
+    color: #A7A7A7;
+    line-height: 1.5em;
+  }
+  .why-fit .why-fit-body .card:hover {
+    background-color: #BE0638;
+    transition: all 0.5s ease;
+  }
+  .why-fit .why-fit-body .card:hover .icon svg path {
+    fill: #fff;
+  }
+  .classes {
+    margin: 0 6em;
+  }
+  .classes .heading {
+    font-size: 4rem;
+    font-family: "Roboto condensed";
+  }
+  .classes .col-4:nth-child(2) .card-top {
+    background: url("../images/fit.png");
+  }
+  .classes .col-4:nth-child(3) .card-top {
+    background: url("../images/tabata.png");
+  }
+  .classes .col-4:nth-child(4) .card-top {
+    background: url("../images/calorie.png");
+  }
+  .classes .card {
+    background-color: #060915;
+    border-radius: 2em;
+    border: 1px solid rgba(190, 6, 55, 0.5333333333);
+    height: 680px;
+  }
+  .classes .card .card-top {
+    background-size: cover;
+    border-radius: 2em 2em 0 0;
+    height: 340px;
+  }
+  .classes .card .card-top .bg-overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: end;
+    justify-content: start;
+  }
+  .classes .card .card-title {
+    padding: 1em 0.6em;
+    font-family: system-ui;
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+  .classes .card .card-body svg {
+    margin: 1.4em 0;
+  }
+  .classes .card .card-body .card-text {
+    font-family: "system-ui";
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 200;
+    color: #cccccc;
+  }
+  .classes .classes-cta button {
+    background-color: #BE0638;
+    padding: 0.5em 4em;
+  }
+  .testimonials {
+    height: 100vh;
+  }
+  .testimonials .heading {
+    font-family: "Roboto Condensed";
+    font-size: 4rem;
+  }
+  .testimonials svg {
+    margin: 1.4em 0;
+  }
+  .testimonials .swiper {
+    width: 100%;
+    height: 560px;
+  }
+  .testimonials .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    padding: 1.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 55%;
+  }
+  .testimonials .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .testimonials .swiper-slide .swiper-header .avatar {
+    width: 70px;
+    height: 70px;
+  }
+  .testimonials .swiper-slide .swiper-header .info {
+    text-align: left;
+  }
+  .testimonials .swiper-slide .swiper-header .info .rating {
+    height: 2em;
+  }
+  .testimonials .swiper-slide .swiper-body {
+    font-family: "Roboto Condensed";
+    font-size: 3rem;
+    text-align: left;
+  }
+  .testimonials .swiper-slide:nth-child(2) {
+    background-color: #BE0638;
+  }
+  .testimonials .swiper-slide:nth-child(2) .swiper-header .info .name {
+    color: #fff;
+  }
+  .testimonials .swiper-slide:nth-child(2) .swiper-body {
+    color: #fff;
+  }
+  .newsletter {
+    height: 40vh;
+    background-color: #BE0638;
+    padding: 3em 7em;
+  }
+  .newsletter .col-6 {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .newsletter .newsletter-text .heading {
+    font-size: 3rem;
+  }
+  .newsletter .newsletter-text .body {
+    font-family: "Nunito Sans";
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    font-weight: 100;
+  }
+  .newsletter .newsletter-input button {
+    background-color: #101010;
+    color: #fff;
+  }
+  .working-hours {
+    padding: 0em 6em;
+    font-family: "Roboto Condensed";
+    font-style: italic;
+  }
+  .working-hours .heading {
+    font-size: 3rem;
+    font-weight: 500;
+    padding-bottom: 1em;
+    border-bottom: 1px solid gray;
+  }
+  .working-hours .body {
+    font-weight: 100;
+  }
+  .working-hours .body .col-4 .days {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  .working-hours .body .col-4 .time {
+    font-size: 1.8rem;
+    color: #BE0638;
+  }
+  .footer {
+    height: 300px;
+    padding: 0 6em;
+    background-color: #000A15;
+  }
+  .footer .nav-links {
+    font-size: 1.2rem;
+  }
+  .footer .nav-links ul li {
+    padding: 1em;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

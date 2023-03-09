@@ -1,0 +1,366 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+
+@media (min-width: 500px) {
+    section {
+        margin-top: 120px;
+    }
+
+    // NAVBAR 
+    .navbar {
+        background-color: #101010;
+        height: 80px;
+        position: fixed;
+        z-index: 2;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        ul {
+            li {
+                padding: 0 .5em;
+            }
+        }
+
+        .navbar-cta {
+
+            background-color: #fff;
+            border-radius: 4px;
+
+            button {
+                color: #BE0638;
+                padding: 0.4em 2em;
+            }
+        }
+
+    }
+
+    // HERO
+    .hero {
+        height: 100vh;
+
+        .hero-title {
+            font-family: 'Roboto Condensed';
+            font-size: 5.5rem;
+            font-weight: 600;
+        }
+
+        .hero-body {
+            font-size: 2rem;
+        }
+
+        .hero-cta {
+            background-color: #BE0638;
+            border-radius: 4px;
+        }
+    }
+
+    // WHY-FIT
+    .why-fit {
+        height: 100vh;
+        margin: 0 6em;
+
+
+        .why-fit-bg {
+            height: 320px;
+            margin: auto;
+            background: url('/assets/images/why-fit-bg.jpg');
+            border-radius: 1.4em;
+
+            .bg-overlay {
+                background: rgba($color: #000000, $alpha: 0.3);
+
+                .bg-text {
+                    font-family: 'Roboto Condensed';
+                    font-size: 4.2rem;
+                    font-weight: 600;
+                }
+            }
+
+        }
+
+        .why-fit-body {
+            margin: 7em 0;
+
+            .card {
+                height: 360px;
+                border-radius: 1em;
+                padding: 2em;
+                font-family: 'Nunito Sans';
+                background-color: #181818;
+                transition: all 0.5s ease;
+
+                .heading {
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-size: 1.5em;
+                    font-weight: bold;
+                }
+
+                .body {
+                    font-size: 1.05em;
+                    font-weight: 100;
+                    color: #A7A7A7;
+                    line-height: 1.5em;
+                }
+
+                &:hover {
+                    background-color: #BE0638;
+                    transition: all 0.5s ease;
+
+                    .icon {
+                        svg {
+                            path {
+                                fill: #fff;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+    }
+
+    .classes {
+        margin: 0 6em;
+
+        .heading {
+            font-size: 4rem;
+            font-family: 'Roboto condensed';
+        }
+
+
+        $bg-images: (
+            2: '../images/fit.png',
+            3: '../images/tabata.png',
+            4: '../images/calorie.png'
+        );
+
+    @each $key,
+    $value in $bg-images {
+        .col-4:nth-child(#{$key}) {
+            .card-top {
+                background: url($value);
+            }
+        }
+    }
+
+    .card {
+        background-color: #060915;
+        border-radius: 2em;
+        border: 1px solid #be063788;
+        height: 680px;
+
+        .card-top {
+            background-size: cover;
+            border-radius: 2em 2em 0 0;
+            height: 340px;
+
+
+            .bg-overlay {
+                background-color: rgba($color: #000000, $alpha: 0.3);
+                display: flex;
+                align-items: end;
+                justify-content: start;
+            }
+
+        }
+
+        .card-title {
+            padding: 1em .6em;
+            font-family: system-ui;
+            font-weight: 600;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        .card-body {
+
+            svg {
+                margin: 1.4em 0;
+            }
+
+            .card-text {
+                font-family: 'system-ui';
+                font-size: 1.2rem;
+                line-height: 2rem;
+                font-weight: 200;
+                color: #cccccc;
+            }
+        }
+    }
+
+    .classes-cta {
+        button {
+            background-color: #BE0638;
+            padding: 0.5em 4em;
+        }
+    }
+}
+
+// TESTIMONIALS 
+.testimonials {
+    height: 100vh;
+
+    .heading {
+        font-family: 'Roboto Condensed';
+        font-size: 4rem;
+    }
+
+    svg {
+        margin: 1.4em 0;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 560px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        padding: 1.4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 55%;
+
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-header {
+
+            .avatar {
+                width: 70px;
+                height: 70px;
+            }
+
+            .info {
+                text-align: left;
+
+                .rating {
+                    height: 2em;
+                }
+            }
+        }
+
+        .swiper-body {
+            font-family: 'Roboto Condensed';
+            font-size: 3rem;
+            text-align: left;
+        }
+
+    }
+
+    .swiper-slide:nth-child(2) {
+        background-color: #BE0638;
+
+        .swiper-header {
+            .info {
+                .name {
+                    color: #fff;
+                }
+            }
+        }
+
+        .swiper-body {
+            color: #fff;
+        }
+    }
+}
+
+// NEWSLETTER 
+.newsletter {
+    height: 40vh;
+    background-color: #BE0638;
+    padding: 3em 7em;
+
+    .col-6 {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .newsletter-text {
+        .heading {
+            font-size: 3rem;
+        }
+
+        .body {
+            font-family: 'Nunito Sans';
+            font-size: 1.4rem;
+            line-height: 2.8rem;
+            font-weight: 100;
+        }
+    }
+
+    .newsletter-input {
+        button {
+            background-color: #101010;
+            color: #fff;
+        }
+    }
+}
+
+// WORKING-HOURS 
+.working-hours {
+    padding: 0em 6em;
+    font-family: 'Roboto Condensed';
+    font-style: italic;
+
+    .heading {
+        font-size: 3rem;
+        font-weight: 500;
+        padding-bottom: 1em;
+        border-bottom: 1px solid gray;
+    }
+
+    .body {
+
+        font-weight: 100;
+
+        .col-4 {
+
+            .days {
+                font-size: 2.5rem;
+                color: #fff;
+            }
+
+            .time {
+                font-size: 1.8rem;
+                color: #BE0638
+            }
+        }
+    }
+}
+
+
+// FOOTER
+.footer {
+    height: 300px;
+    padding: 0 6em;
+    background-color: #000A15;
+
+    .nav-links {
+        font-size: 1.2rem;
+
+        ul {
+            li {
+                padding: 1em;
+            }
+        }
+    }
+}
+}
