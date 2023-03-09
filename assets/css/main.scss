@@ -205,10 +205,11 @@ $value in $bg-images {
 }
 }
 
-//NEWSLETTER
+//TESTIMONIALS
 .testimonials {
     height: 70vh;
     margin-top: 2em;
+    overflow-y:hidden;
 
     .heading {
         font-family: 'Roboto Condensed';
@@ -225,7 +226,7 @@ $value in $bg-images {
     }
 
     .swiper-slide {
-        text-align: center;
+        text-align: center; 
         font-size: 18px;
         padding: 1.4em;
         display: flex;
