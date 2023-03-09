@@ -155,7 +155,7 @@ section {
 .testimonials {
   height: 75vh;
   margin-top: 2em;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .testimonials .heading {
   font-family: "Roboto Condensed";
