@@ -104,13 +104,13 @@ section {
   margin: 1em 0;
   padding: 0 1em;
 }
-.classes .col-12:nth-child(2) .card-top {
+.classes .col-12:nth-child(1) .card-top {
   background: url("../images/fit.png");
 }
-.classes .col-12:nth-child(3) .card-top {
+.classes .col-12:nth-child(2) .card-top {
   background: url("../images/tabata.png");
 }
-.classes .col-12:nth-child(4) .card-top {
+.classes .col-12:nth-child(3) .card-top {
   background: url("../images/calorie.png");
 }
 .classes .card {
@@ -209,10 +209,102 @@ section {
   color: #fff;
 }
 
+.plans {
+  padding: 0 1.4rem;
+  margin-bottom: 60px;
+  font-family: "system-ui";
+  overflow: hidden;
+}
+.plans .card {
+  height: 640px;
+  border-radius: 1rem;
+}
+.plans .card .title {
+  font-size: 1.4rem;
+}
+.plans .card .subtitle {
+  font-size: 0.8rem;
+  color: #A7A7A7;
+}
+.plans .card .subtitle span {
+  color: #BE0638;
+}
+.plans .card .body .item .right .name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.plans .card .body .item .right .price {
+  color: #A7A7A7;
+}
+.plans .card .foot .foot-cta button {
+  background-color: #BE0638;
+}
+.plans .card-alt {
+  background-color: #BE0638;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.plans .card-alt .subtitle {
+  color: #fff;
+}
+.plans .card-alt .subtitle span {
+  color: #fff;
+}
+.plans .card-alt .body .item .right .name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.plans .card-alt .body .item .right .price {
+  color: #fff;
+}
+.plans .card-alt .foot .foot-cta button {
+  background-color: #fff;
+  color: #BE0638;
+}
+
+.intro, .how-it-works {
+  padding: 0 2em;
+}
+.intro .heading, .how-it-works .heading {
+  font-size: 2rem;
+}
+.intro .body, .how-it-works .body {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 200;
+  line-height: 2rem;
+  font-size: 20px;
+  color: #A7A7A7;
+}
+.intro .card, .how-it-works .card {
+  width: 80%;
+  background: none;
+}
+.intro .card .card-body, .how-it-works .card .card-body {
+  background-color: #404040;
+  font-size: 1.5rem;
+}
+.intro img, .how-it-works img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.intro button, .how-it-works button {
+  background-color: #BE0638;
+}
+
+.how-it-works img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .newsletter {
   height: 40vh;
   background-color: rgba(190, 6, 55, 0.6509803922);
   padding: 3em 3em;
+  overflow: hidden;
 }
 .newsletter .col-md-6 {
   display: flex;
@@ -229,6 +321,9 @@ section {
   font-size: 1.4rem;
   line-height: 2.8rem;
   font-weight: 100;
+}
+.newsletter .newsletter-input {
+  margin-top: 2em;
 }
 .newsletter .newsletter-input input {
   height: 3em;
@@ -274,12 +369,9 @@ section {
   padding: 1em 0;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 767px) {
   section {
     margin-top: 120px;
-  }
-  .row {
-    --bs-gutter-x: 0;
   }
   .navbar {
     background-color: #101010;
@@ -315,7 +407,6 @@ section {
     border-radius: 4px;
   }
   .why-fit {
-    height: 100vh;
     margin: 0 6em;
   }
   .why-fit .why-fit-bg {
@@ -368,18 +459,20 @@ section {
     font-size: 4rem;
     font-family: "Roboto condensed";
   }
-  .classes .col-12 {
-    margin: 1em 0;
-    padding: 0 0.6em;
+  .classes .col-md-4:nth-child(1) .card-top {
+    background: url("../images/fit.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .classes .col-md-4:nth-child(2) .card-top {
-    background: url("../images/fit.png");
+    background: url("../images/tabata.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .classes .col-md-4:nth-child(3) .card-top {
-    background: url("../images/tabata.png");
-  }
-  .classes .col-md-4:nth-child(4) .card-top {
     background: url("../images/calorie.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .testimonials {
     height: 100vh;
@@ -423,7 +516,7 @@ section {
   }
   .testimonials .swiper-slide .swiper-body {
     font-family: "Roboto Condensed";
-    font-size: 3rem;
+    font-size: 2.2rem;
     text-align: left;
   }
   .testimonials .swiper-slide:nth-child(2) {
@@ -435,10 +528,235 @@ section {
   .testimonials .swiper-slide:nth-child(2) .swiper-body {
     color: #fff;
   }
+  .plans {
+    padding: 0 2em;
+    margin-bottom: 120px;
+  }
   .newsletter {
     height: 40vh;
     background-color: #BE0638;
     padding: 3em 7em;
+    overflow: hidden;
+  }
+  .newsletter .col-6 {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .newsletter .newsletter-text .heading {
+    font-size: 3rem;
+  }
+  .newsletter .newsletter-text .body1,
+.newsletter .newsletter-text .body2 {
+    font-family: "Nunito Sans";
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    font-weight: 100;
+  }
+  .newsletter .newsletter-input button {
+    background-color: #101010;
+    color: #fff;
+  }
+  .working-hours {
+    padding: 0em 6em;
+    font-family: "Roboto Condensed";
+    font-style: italic;
+  }
+  .working-hours .heading {
+    font-size: 3rem;
+    font-weight: 500;
+    padding-bottom: 1em;
+    border-bottom: 1px solid gray;
+  }
+  .working-hours .body {
+    font-weight: 100;
+  }
+  .working-hours .body .col-4 .days {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  .working-hours .body .col-4 .time {
+    font-size: 1.8rem;
+    color: #BE0638;
+  }
+  .footer {
+    height: 300px;
+    padding: 0 6em;
+    background-color: #000A15;
+  }
+  .footer .nav-links {
+    font-size: 1.2rem;
+  }
+  .footer .nav-links ul li {
+    padding: 1em;
+  }
+}
+@media (min-width: 992px) {
+  section {
+    margin-top: 120px;
+  }
+  .navbar {
+    background-color: #101010;
+    height: 80px;
+    position: fixed;
+    z-index: 2;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  .navbar ul li {
+    padding: 0 0.5em;
+  }
+  .navbar .navbar-cta {
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  .navbar .navbar-cta button {
+    color: #BE0638;
+    padding: 0.4em 2em;
+  }
+  .hero {
+    height: 100vh;
+  }
+  .hero .hero-title {
+    font-family: "Roboto Condensed";
+    font-size: 5.5rem;
+    font-weight: 600;
+  }
+  .hero .hero-body {
+    font-size: 2rem;
+  }
+  .hero .hero-cta {
+    background-color: #BE0638;
+    border-radius: 4px;
+  }
+  .why-fit {
+    margin: 0 6em;
+  }
+  .why-fit .why-fit-bg {
+    height: 320px;
+    margin: auto;
+    background: url("/assets/images/why-fit-bg.jpg");
+    border-radius: 1.4em;
+  }
+  .why-fit .why-fit-bg .bg-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .why-fit .why-fit-bg .bg-overlay .bg-text {
+    font-family: "Roboto Condensed";
+    font-size: 4.2rem;
+    font-weight: 600;
+  }
+  .why-fit .why-fit-body {
+    margin: 7em 0;
+  }
+  .why-fit .why-fit-body .card {
+    height: 360px;
+    border-radius: 1em;
+    padding: 2em;
+    font-family: "Nunito Sans";
+    background-color: #181818;
+    transition: all 0.5s ease;
+  }
+  .why-fit .why-fit-body .card .heading {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .why-fit .why-fit-body .card .body {
+    font-size: 1.05em;
+    font-weight: 100;
+    color: #A7A7A7;
+    line-height: 1.5em;
+  }
+  .why-fit .why-fit-body .card:hover {
+    background-color: #BE0638;
+    transition: all 0.5s ease;
+  }
+  .why-fit .why-fit-body .card:hover .icon svg path {
+    fill: #fff;
+  }
+  .classes {
+    margin: 0 6em;
+  }
+  .classes .heading {
+    font-size: 4rem;
+    font-family: "Roboto condensed";
+  }
+  .classes .col-md-4:nth-child(1) .card-top {
+    background: url("../images/fit.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .classes .col-md-4:nth-child(2) .card-top {
+    background: url("../images/tabata.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .classes .col-md-4:nth-child(3) .card-top {
+    background: url("../images/calorie.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .testimonials .heading {
+    font-family: "Roboto Condensed";
+    font-size: 4rem;
+  }
+  .testimonials svg {
+    margin: 1.4em 0;
+  }
+  .testimonials .swiper {
+    width: 100%;
+    height: 560px;
+  }
+  .testimonials .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    padding: 1.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 55%;
+  }
+  .testimonials .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .testimonials .swiper-slide .swiper-header .avatar {
+    width: 70px;
+    height: 70px;
+  }
+  .testimonials .swiper-slide .swiper-header .info {
+    text-align: left;
+  }
+  .testimonials .swiper-slide .swiper-header .info .rating {
+    height: 2em;
+  }
+  .testimonials .swiper-slide .swiper-body {
+    font-family: "Roboto Condensed";
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  .testimonials .swiper-slide:nth-child(2) {
+    background-color: #BE0638;
+  }
+  .testimonials .swiper-slide:nth-child(2) .swiper-header .info .name {
+    color: #fff;
+  }
+  .testimonials .swiper-slide:nth-child(2) .swiper-body {
+    color: #fff;
+  }
+  .plans {
+    padding: 0 2em;
+    margin-bottom: 120px;
+  }
+  .newsletter {
+    height: 40vh;
+    background-color: #BE0638;
+    padding: 3em 7em;
+    overflow: hidden;
   }
   .newsletter .col-6 {
     display: flex;

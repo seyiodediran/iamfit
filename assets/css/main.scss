@@ -2,16 +2,17 @@ html {
     width: 100vw;
     overflow-x: hidden;
 }
+
 body {
     margin: 0;
     padding: 0;
-   
+
     box-sizing: border-box;
     background-color: #000;
     font-family: 'Nunito Sans', sans-serif;
 
 }
- 
+
 section {
     margin-top: 60px;
 }
@@ -41,6 +42,7 @@ section {
     }
 
 }
+
 // HERO
 .hero {
     height: 80vh;
@@ -65,23 +67,24 @@ section {
 // WHY I AM FIT 
 
 .why-fit-bg {
-            margin-bottom: 2em;
-        .bg-overlay {
+    margin-bottom: 2em;
 
-            .bg-text {
-                font-family: 'Roboto Condensed';
-                font-size: 2.5rem;
-                font-weight: 600;
-            }
+    .bg-overlay {
+
+        .bg-text {
+            font-family: 'Roboto Condensed';
+            font-size: 2.5rem;
+            font-weight: 600;
         }
+    }
 
-    
+
 
 }
 
 .why-fit-body-mobile {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     margin-bottom: 2em;
     overflow: hidden;
 
@@ -138,9 +141,9 @@ section {
 
 
     $bg-images: (
-        2: '../images/fit.png',
-        3: '../images/tabata.png',
-        4: '../images/calorie.png'
+        1: '../images/fit.png',
+        2: '../images/tabata.png',
+        3: '../images/calorie.png'
     );
 
 @each $key,
@@ -209,7 +212,7 @@ $value in $bg-images {
 .testimonials {
     height: 75vh;
     margin-top: 2em;
-    overflow:hidden;
+    overflow: hidden;
 
     .heading {
         font-family: 'Roboto Condensed';
@@ -225,8 +228,8 @@ $value in $bg-images {
         height: 100%;
     }
 
-    .swiper-slide { 
-        text-align: center; 
+    .swiper-slide {
+        text-align: center;
         font-size: 18px;
         padding: 1.4em;
         display: flex;
@@ -284,11 +287,160 @@ $value in $bg-images {
     }
 }
 
+// PLANS
+.plans {
+    padding: 0 1.4rem;
+    margin-bottom: 60px;
+    font-family: 'system-ui';
+    overflow: hidden;
+
+
+    .card {
+        height: 640px;
+        border-radius: 1rem;
+        .title {
+            font-size: 1.4rem;
+            ;
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+            color: #A7A7A7;
+
+            span {
+                color: #BE0638;
+            }
+        }
+
+        .body {
+
+            .item {
+                .right {
+                    .name {
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                    }
+
+                    .price {
+                        color: #A7A7A7;
+                    }
+                }
+            }
+        }
+
+        .foot {
+            .foot-cta {
+                button {
+                    background-color: #BE0638;
+                }
+            }
+        }
+    }
+
+    .card-alt {
+        background-color: #BE0638;
+        color: #fff;
+        border: 2px solid #fff;
+
+        .subtitle {
+            color: #fff;
+
+            span {
+                color: #fff;
+
+            }
+        }
+
+
+        .body {
+
+            .item {
+                .right {
+                    .name {
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                    }
+
+                    .price {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .foot {
+            .foot-cta {
+                button {
+                    background-color: #fff;
+                    color:#BE0638;
+                }
+            }
+        }
+
+    }
+}
+
+//INTRO
+.intro, .how-it-works {
+    padding:0 2em;
+
+    .heading {
+        font-size: 2rem;
+    }
+    .body {
+        font-family: 'IBM Plex Serif', serif;
+        font-weight: 200;
+        line-height: 2rem;
+        font-size: 20px;
+        color: #A7A7A7;
+    }
+    .card {
+        // border-radius: 32px 32px 0 0;
+        // height: 50vh;
+        width: 80%;
+        background: none;
+
+        .card-body {
+            background-color:#404040;
+            font-size: 1.5rem;
+        }
+    }
+    img {
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+        // border-radius: 16px 16px 0 0;
+
+        
+    }
+
+    button {
+        background-color: #BE0638;
+
+    }
+
+}
+
+//HOW IT WORKS
+.how-it-works {
+
+
+    img {
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 // NEWSLETTER 
 .newsletter {
     height: 40vh;
     background-color: #be0637a6;
     padding: 3em 3em;
+    overflow: hidden;
+
 
     .col-md-6 {
         display: flex;
@@ -312,10 +464,12 @@ $value in $bg-images {
     }
 
     .newsletter-input {
-input{
+        margin-top: 2em;
+        input {
             height: 3em;
+            
 
-}
+        }
 
         button {
             background-color: #101010;
@@ -378,13 +532,9 @@ input{
     }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 767px) {
     section {
         margin-top: 120px;
-    }
-
-    .row {
-        --bs-gutter-x: 0;
     }
 
     // NAVBAR 
@@ -436,7 +586,7 @@ input{
 
     // WHY-FIT
     .why-fit {
-        height: 100vh;
+        // height: 100vh;
         margin: 0 6em;
 
 
@@ -509,15 +659,12 @@ input{
             font-family: 'Roboto condensed';
         }
 
-        .col-12 {
-            margin: 1em 0;
-            padding: 0 0.6em;
-        }
+
 
         $bg-images: (
-            2: '../images/fit.png',
-            3: '../images/tabata.png',
-            4: '../images/calorie.png'
+            1: '../images/fit.png',
+            2: '../images/tabata.png',
+            3: '../images/calorie.png'
         );
 
     @each $key,
@@ -525,6 +672,8 @@ input{
         .col-md-4:nth-child(#{$key}) {
             .card-top {
                 background: url($value);
+                background-size: cover;
+                background-repeat: no-repeat;
             }
         }
     }
@@ -584,7 +733,7 @@ input{
 
         .swiper-body {
             font-family: 'Roboto Condensed';
-            font-size: 3rem;
+            font-size: 2.2rem;
             text-align: left;
         }
 
@@ -607,11 +756,340 @@ input{
     }
 }
 
+
+//PLANS
+.plans {
+    padding: 0 2em;
+    margin-bottom: 120px;
+}
+
 // NEWSLETTER 
 .newsletter {
     height: 40vh;
     background-color: #BE0638;
     padding: 3em 7em;
+    overflow: hidden;
+
+
+    .col-6 {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .newsletter-text {
+        .heading {
+            font-size: 3rem;
+        }
+
+        .body1,
+        .body2 {
+            font-family: 'Nunito Sans';
+            font-size: 1.4rem;
+            line-height: 2.8rem;
+            font-weight: 100;
+        }
+    }
+
+    .newsletter-input {
+        button {
+            background-color: #101010;
+            color: #fff;
+        }
+    }
+}
+
+// WORKING-HOURS 
+.working-hours {
+    padding: 0em 6em;
+    font-family: 'Roboto Condensed';
+    font-style: italic;
+
+    .heading {
+        font-size: 3rem;
+        font-weight: 500;
+        padding-bottom: 1em;
+        border-bottom: 1px solid gray;
+    }
+
+    .body {
+
+        font-weight: 100;
+
+        .col-4 {
+
+            .days {
+                font-size: 2.5rem;
+                color: #fff;
+            }
+
+            .time {
+                font-size: 1.8rem;
+                color: #BE0638
+            }
+        }
+    }
+}
+
+
+// FOOTER
+.footer {
+    height: 300px;
+    padding: 0 6em;
+    background-color: #000A15;
+
+    .nav-links {
+        font-size: 1.2rem;
+
+        ul {
+            li {
+                padding: 1em;
+            }
+        }
+    }
+}
+}
+
+
+@media (min-width: 992px) {
+    section {
+        margin-top: 120px;
+    }
+
+    // NAVBAR 
+    .navbar {
+        background-color: #101010;
+        height: 80px;
+        position: fixed;
+        z-index: 2;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        ul {
+            li {
+                padding: 0 .5em;
+            }
+        }
+
+        .navbar-cta {
+
+            background-color: #fff;
+            border-radius: 4px;
+
+            button {
+                color: #BE0638;
+                padding: 0.4em 2em;
+            }
+        }
+
+    }
+
+    // HERO
+    .hero {
+        height: 100vh;
+
+        .hero-title {
+            font-family: 'Roboto Condensed';
+            font-size: 5.5rem;
+            font-weight: 600;
+        }
+
+        .hero-body {
+            font-size: 2rem;
+        }
+
+        .hero-cta {
+            background-color: #BE0638;
+            border-radius: 4px;
+        }
+    }
+
+    // WHY-FIT
+    .why-fit {
+        // height: 100vh;
+        margin: 0 6em;
+
+
+        .why-fit-bg {
+            height: 320px;
+            margin: auto;
+            background: url('/assets/images/why-fit-bg.jpg');
+            border-radius: 1.4em;
+
+            .bg-overlay {
+                background: rgba($color: #000000, $alpha: 0.3);
+
+                .bg-text {
+                    font-family: 'Roboto Condensed';
+                    font-size: 4.2rem;
+                    font-weight: 600;
+                }
+            }
+
+        }
+
+        .why-fit-body {
+            margin: 7em 0;
+
+            .card {
+                height: 360px;
+                border-radius: 1em;
+                padding: 2em;
+                font-family: 'Nunito Sans';
+                background-color: #181818;
+                transition: all 0.5s ease;
+
+                .heading {
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-size: 1.5em;
+                    font-weight: bold;
+                }
+
+                .body {
+                    font-size: 1.05em;
+                    font-weight: 100;
+                    color: #A7A7A7;
+                    line-height: 1.5em;
+                }
+
+                &:hover {
+                    background-color: #BE0638;
+                    transition: all 0.5s ease;
+
+                    .icon {
+                        svg {
+                            path {
+                                fill: #fff;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+    }
+
+    .classes {
+        margin: 0 6em;
+
+        .heading {
+            font-size: 4rem;
+            font-family: 'Roboto condensed';
+        }
+
+
+
+        $bg-images: (
+            1: '../images/fit.png',
+            2: '../images/tabata.png',
+            3: '../images/calorie.png'
+        );
+
+    @each $key,
+    $value in $bg-images {
+        .col-md-4:nth-child(#{$key}) {
+            .card-top {
+                background: url($value);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+// TESTIMONIALS 
+.testimonials {
+
+
+    .heading {
+        font-family: 'Roboto Condensed';
+        font-size: 4rem;
+    }
+
+    svg {
+        margin: 1.4em 0;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 560px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        padding: 1.4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 55%;
+
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-header {
+
+            .avatar {
+                width: 70px;
+                height: 70px;
+            }
+
+            .info {
+                text-align: left;
+
+                .rating {
+                    height: 2em;
+                }
+            }
+        }
+
+        .swiper-body {
+            font-family: 'Roboto Condensed';
+            font-size: 2.5rem;
+            text-align: left;
+        }
+
+    }
+
+    .swiper-slide:nth-child(2) {
+        background-color: #BE0638;
+
+        .swiper-header {
+            .info {
+                .name {
+                    color: #fff;
+                }
+            }
+        }
+
+        .swiper-body {
+            color: #fff;
+        }
+    }
+}
+
+
+//PLANS
+.plans {
+    padding: 0 2em;
+    margin-bottom: 120px;
+}
+
+// NEWSLETTER 
+.newsletter {
+    height: 40vh;
+    background-color: #BE0638;
+    padding: 3em 7em;
+    overflow: hidden;
+
 
     .col-6 {
         display: flex;
